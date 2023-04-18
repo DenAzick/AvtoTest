@@ -1,0 +1,118 @@
+﻿@using Autotest.Mvc.Services
+@using Autotest.Mvc.Models
+@using Avtotest.Models;
+@using AvtoTest.Repositories;
+@inject UserRepository UserRepository
+@inject QuestionService QuestionService
+
+@{
+    ViewData["Title"] = "Home Page";
+    var users = UserRepository.GetUsers();
+
+}
+@model UserRepository.GetUser();
+
+<a href="https://localhost:7026/Tickets" class="btn btn-primary">Start testing</a>
+
+@{
+    var sum = UserRepository.GetUser.
+}
+
+@{
+
+    //    <h1>Users </h1>
+    //    <table class="table">
+    //        <thead>
+    //            <tr>
+    //                <th scope="col">#</th>
+    //                <th scope="col">Username</th>
+    //                <th scope="col">Name</th>
+    //                <th scope="col">CorrectCount</th>
+    //            </tr>
+    //        </thead>
+    //        <tbody>
+
+    //            @for (int i = 0; i < users.Count; i++)
+    //            {
+    //                        var user = users[i];
+
+    //                <tr>
+    //                    <th scope="row">@(i + 1)</th>
+    //                    <td>@user.Username</td>
+    //                    <td>@user.Name</td>
+    //                    <td>@user.Tickets.Sum(t=>t.CorrectCount)</td>
+    //                </tr>
+    //            }
+
+    //        </tbody>
+    //    </table>
+}
+
+@{
+    var ticket = new Ticket();
+    var date = ticket.Date.ToString();
+}
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="table-responsive table-bordered movie-table">
+            <table class="table movie-table">
+                <thead>
+                    <tr class="movie-table-head">
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>correct count</th>
+                        <th>total count</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @{
+                        for (int i = 0; i < users.Count; i++)
+                        {
+                            var user = users[i];
+
+
+                            <!--row-->
+                            <tr class="dark-row">
+                                <td>@(i + 1)</td>
+                                <td>@(user.Name)</td>
+                                <td>@(user.Username)</td>
+                                <td> <span style="color:green;">@sum</span>700</td>
+                                <td>40</td>
+                                <td>Both</td>
+                            </tr>
+                            <!--/.row-->
+                            <!--row-->
+
+                            <tr class="light-row">
+                                <td>The Shining</td>
+                                <td> <span style="color:green;">5</span> /5 </td>
+                                <td>37</td>
+                                <td>Both</td>
+                            </tr>
+                        }
+                    }
+                    <!--/.row-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+﻿@using Autotest.Mvc.Models;
+@model SignInUserModel
+
+
+
+@*<form class="row g-3" style="width: 400px" asp-controller="Users" asp-action="SignIn" method="post">
+    <div>
+        <input name="Username" class="form-control" asp-for="Username" type="text" placeholder="Username" />
+        <span class="text-danger" asp-validation-for="Username"></span>
+    </div>
+    <div>
+        <input name="Password" class="form-control" asp-for="Password" type="text" placeholder="Password" />
+        <span class="text-danger" asp-validation-for="Password"></span>
+    </div>
+    <button class="form-control" type="submit">Sign In</button>
+    <a class="link-info" asp-controller="Users" asp-action="SignUp">Sign Up</a>
+</form>
+*@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="~/Autotest/noimage.png" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
+                <form asp-controller="Users" asp-action="SignIn" method="post">
+                   
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input name="Username" class="form-control" asp-for="Username" type="text" placeholder="Username" />
+                        <span class="text-danger" asp-validation-for="Username"></span>
+                        
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input name="Password" class="form-control" asp-for="Password" type="text" placeholder="Password" />
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                       
+                    </div>
+
+                    <div class=" text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" class="btn btn-primary btn-lg"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem"  >
+                            Login
+                        </button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>

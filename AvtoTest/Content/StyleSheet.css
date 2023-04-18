@@ -1,0 +1,74 @@
+﻿body {
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+.button2 {
+    background-color: #008CBA;
+}
+/* Blue */
+.button3 {
+    background-color: #f44336;
+}
+/* Red */
+.button4 {
+    background-color: #e7e7e7;
+    color: black;
+}
+/* Gray */
+.button5 {
+    background-color: #555555;
+}
+/* Black */
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+homeimage {
+    /* задаёт путь до файла */
+    background-image: url("path_to_my_image.jpg");
+    /* задает стартовое положение изображения на странице */
+    background-position: center center;
+    /* определяет размер изображения на странице */
+    background-size: cover;
+    /* свойство устанавливает, будет ли повторяться изображение и каким образом */
+    background-repeat: no-repeat;
+    /* cвойство определяет, будет ли фоновое изображение прокручиваться 
+  вместе с остальной частью страницы или будет фиксированным */
+    background-attachment: fixed;
+    /* возможна также и короткая запись данных свойств */
+    // background: url("path_to_my_image.jpg") center center no-repeat fixed;
+    // background-size: cover;
+}
+
+buttonLanguage {
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.active {
+    background-color: red;
+}

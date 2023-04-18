@@ -1,0 +1,19 @@
+﻿@using Autotest.Mvc.Models;
+@model User
+
+@foreach (var ticket in Model.Tickets)
+{
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Ticket @(ticket.TicketId+1)</h4>
+
+            @if (ticket.Answers.Count > 0)
+            {
+                <p class="card-text">@ticket.CorrectCount / @ticket.QuestionsCount</p>
+                <p class="card-text">@ticket.Date.ToString("f")</p>
+            }
+
+            <a asp-controller="Tickets" asp-action="StartTicket" asp-route-ticketIndex="@(ticket.TicketId+1)">Start</a>
+        </div>
+    </div>
+}
